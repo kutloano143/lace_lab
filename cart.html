@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart - The Lace Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Your Cart</h1>
+  <a href="#" class="cart back-btn" onclick="goBack(); return false;">⬅ Back</a>
+</header>
+
+
+<div class="cart-container">
+  <div id="cart-items"></div>
+
+  <div class="cart-summary">
+    <h2>Total: <span id="cart-total">R0</span></h2>
+
+    <div class="cart-actions">
+      <button class="checkout-btn" onclick="checkoutWhatsApp()">
+        Checkout via WhatsApp
+      </button>
+
+      <button class="clear-btn" onclick="clearCart()">
+        Clear Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

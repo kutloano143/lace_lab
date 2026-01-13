@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Lace Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>The Lace Lab</h1>
+  <a href="#" onclick="toggleCart(); return false;" class="cart">🛒 <span id="cart-count">0</span></a>
+</header>
+
+<div class="products">
+
+  <h2 onclick="toggleCategory('kicks')" style="cursor: pointer; margin: 20px 0;">Kicks ▼</h2>
+  <div id="kicks" class="category-products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=Nike+Shox" alt="Nike Shox TL Black">
+      <div class="product-details">
+        <p class="category">Urban Sneakers</p>
+        <p class="price">R1299</p>
+
+        <select id="size1">
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+
+      <button onclick="addProduct('Nike Shox TL Black', 1299, 'size1', 'https://via.placeholder.com/350x350?text=Nike+Shox')">
+        Add to Cart
+      </button>
+      <button onclick="buyNow('Nike Shox TL Black', 1299, 'size1', 'https://via.placeholder.com/350x350?text=Nike+Shox')" class="buy-now-btn">
+        Buy Now
+      </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=Nike+Air+Max" alt="Nike Air Max">
+      <div class="product-details">
+        <p class="category">Running Shoes</p>
+        <p class="price">R1499</p>
+
+        <select id="size3">
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+
+        <button onclick="addProduct('Nike Air Max', 1499, 'size3', 'https://via.placeholder.com/350x350?text=Nike+Air+Max')">
+          Add to Cart
+        </button>
+        <button onclick="buyNow('Nike Air Max', 1499, 'size3', 'https://via.placeholder.com/350x350?text=Nike+Air+Max')" class="buy-now-btn">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=Adidas+Ultraboost" alt="Adidas Ultraboost">
+      <div class="product-details">
+        <p class="category">Boost Shoes</p>
+        <p class="price">R1599</p>
+
+        <select id="size4">
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+
+        <button onclick="addProduct('Adidas Ultraboost', 1599, 'size4', 'https://via.placeholder.com/350x350?text=Adidas+Ultraboost')">
+          Add to Cart
+        </button>
+        <button onclick="buyNow('Adidas Ultraboost', 1599, 'size4', 'https://via.placeholder.com/350x350?text=Adidas+Ultraboost')" class="buy-now-btn">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 onclick="toggleCategory('clothes')" style="cursor: pointer; margin: 20px 0;">Clothes ▼</h2>
+  <div id="clothes" class="category-products">
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=Hoodie" alt="The Lace Lab Hoodie">
+      <div class="product-details">
+        <p class="category">Streetwear</p>
+        <p class="price">R699</p>
+
+        <select id="size2">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+
+        <button onclick="addProduct('The Lace Lab Hoodie', 699, 'size2', 'https://via.placeholder.com/350x350?text=Hoodie')">
+          Add to Cart
+        </button>
+        <button onclick="buyNow('The Lace Lab Hoodie', 699, 'size2', 'https://via.placeholder.com/350x350?text=Hoodie')" class="buy-now-btn">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=T-Shirt" alt="Graphic T-Shirt">
+      <div class="product-details">
+        <p class="category">Casual Wear</p>
+        <p class="price">R299</p>
+
+        <select id="size5">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+
+        <button onclick="addProduct('Graphic T-Shirt', 299, 'size5', 'https://via.placeholder.com/350x350?text=T-Shirt')">
+          Add to Cart
+        </button>
+        <button onclick="buyNow('Graphic T-Shirt', 299, 'size5', 'https://via.placeholder.com/350x350?text=T-Shirt')" class="buy-now-btn">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/350x350?text=Jacket" alt="Denim Jacket">
+      <div class="product-details">
+        <p class="category">Outerwear</p>
+        <p class="price">R899</p>
+
+        <select id="size6">
+          <option>S</option><option>M</option><option>L</option><option>XL</option>
+        </select>
+
+        <button onclick="addProduct('Denim Jacket', 899, 'size6', 'https://via.placeholder.com/350x350?text=Jacket')">
+          Add to Cart
+        </button>
+        <button onclick="buyNow('Denim Jacket', 899, 'size6', 'https://via.placeholder.com/350x350?text=Jacket')" class="buy-now-btn">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="cart-container" class="cart-container" style="display: none;">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+
+  <div class="cart-summary">
+    <h2>Total: <span id="cart-total">R0</span></h2>
+
+    <div class="payment-options">
+      <h3>Select Payment Method</h3>
+      <label><input type="radio" name="payment" value="credit" checked> Credit Card</label>
+      <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+      <label><input type="radio" name="payment" value="cash"> Cash on Delivery</label>
+    </div>
+
+    <div id="payment-form" class="payment-form">
+      <h3>Enter Payment Details</h3>
+      <input type="text" id="card-number" placeholder="Card Number" required>
+      <input type="text" id="expiry" placeholder="MM/YY" required>
+      <input type="text" id="cvv" placeholder="CVV" required>
+      <input type="text" id="name" placeholder="Cardholder Name" required>
+    </div>
+
+    <div class="cart-actions">
+      <button class="checkout-btn" onclick="processPayment()">
+        Pay Now
+      </button>
+
+      <button class="checkout-btn" onclick="checkoutWhatsApp()">
+        Checkout via WhatsApp
+      </button>
+
+      <button class="clear-btn" onclick="clearCart()">
+        Clear Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/27817644450" class="whatsapp" target="_blank">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
