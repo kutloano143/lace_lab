@@ -15,16 +15,6 @@ function formatZAR(value) {
   return `R${Math.round(value)}`;
 }
 
-function generateReferenceNumber() {
-  const now = new Date();
-  const dateStamp = now
-    .toISOString()
-    .replace(/[-:T]/g, "")
-    .slice(0, 14);
-  const randomStamp = Math.floor(1000 + Math.random() * 9000);
-  return `LL-${dateStamp}-${randomStamp}`;
-}
-
 /* ---------- Cart count ---------- */
 function updateCartCount() {
   const count = document.getElementById("cart-count");
@@ -131,14 +121,13 @@ function checkoutWhatsApp() {
 
   let message = "Hello The Lace Lab, I would like to order:\n\n";
   let total = 0;
-  const referenceNumber = generateReferenceNumber();
 
   cart.forEach((item, i) => {
     total += Number(item.price);
     message += `${i + 1}. ${item.name} - ${formatZAR(item.price)} (Size ${item.size})\n`;
   });
 
-  message += `\nTotal: ${formatZAR(total)}\nReference: ${referenceNumber}`;
+  message += `\nTotal: ${formatZAR(total)}`;
 
   // ✅ WhatsApp needs country code (South Africa) + no leading 0
   const phone = "27817644450";
