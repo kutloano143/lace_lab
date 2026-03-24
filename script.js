@@ -8,8 +8,6 @@ function goBack() {
   }
 }
 
-
-
 /* ---------- Helpers ---------- */
 function formatZAR(value) {
   return `R${Math.round(value)}`;
@@ -19,8 +17,10 @@ function formatZAR(value) {
 function updateCartCount() {
   const count = document.getElementById("cart-count");
   if (count) count.innerText = cart.length;
+  
+  const navCount = document.getElementById("cart-count-nav");
+  if (navCount) navCount.innerText = cart.length;
 }
-updateCartCount();
 
 /* ---------- Add product ---------- */
 function addProduct(name, price, sizeId, image) {
@@ -73,6 +73,11 @@ function toggleCategory(category) {
   }
 }
 
+function initPage() {
+  updateCartCount();
+  renderCart();
+}
+
 /* ---------- Render cart ---------- */
 function renderCart() {
   const container = document.getElementById("cart-items");
@@ -110,7 +115,9 @@ function renderCart() {
   const totalEl = document.getElementById("cart-total");
   if (totalEl) totalEl.innerText = formatZAR(total);
 }
-renderCart();
+
+// Init
+document.addEventListener('DOMContentLoaded', initPage);
 
 /* ---------- WhatsApp checkout ---------- */
 function checkoutWhatsApp() {
@@ -136,4 +143,17 @@ function checkoutWhatsApp() {
     `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
     "_blank"
   );
+}
+
+// Placeholder
+function processPayment() {
+  alert("Payment processing not implemented. Use WhatsApp checkout!");
+}
+
+function buyNow(name, price, sizeId, image) {
+  const sizeEl = document.getElementById(sizeId);
+  const size = sizeEl ? sizeEl.value : "";
+  cart = [{ name, price: Number(price), size, image }];
+  localStorage.setItem("cart", JSON.stringify(cart));
+  toggleCart();
 }
