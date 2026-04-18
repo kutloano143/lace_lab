@@ -1,25 +1,30 @@
-# Lace Lab Finish & Deploy TODO (Complete ✅)
+# Monate Water E-commerce Site TODO (Approved Plan ✅)
 
-## Steps (Approved Plan)
-- [x] **Step 1**: Rename Lacelap.html → index.html + replace placeholder images with local Nike PNGs.
-- [x] **Step 2**: Update index.html - Add navbar, footer/About section, SEO meta tags.
-- [x] **Step 3**: Update cart.html - Fix links/headers to index.html.
-- [x] **Step 4**: Update script.js - Init functions, category toggles.
-- [x] **Step 5**: Polish style.css - Nav/footer styles.
-- [x] **Step 6**: Update README.md - Full docs + deploy instructions.
-- [x] **Step 7**: Local test: Run `start index.html`.
-- [ ] **Step 8**: Git commit + deploy to GitHub Pages (`gh-pages` branch).
+## Steps (Breakdown of Approved Plan)
+- [ ] **Step 1**: Update README.md with new site description.
+- [ ] **Step 2**: Edit script.js - WhatsApp message and company reference.
+- [ ] **Step 3**: Edit style.css - Blue water theme colors/backgrounds.
+- [x] **Step 4**: Edit cart.html - Branding.
+- [x] **Step 5**: Edit index.html - Branding, products, categories (bulk).
+- [x] **Step 6**: Remove old shoe images (git rm).
+- [x] **Step 7**: Local test: `start index.html`.
+- [ ] **Step 8**: Git commit/PR on blackboxai/monate-water-site branch.
 
-**Progress**: Core project finished & tested locally. Ready for deploy.
+**Progress**: Plan approved. Starting edits.
+
+## Water Products Added
+1. Still Water 500ml - R15
+2. Still Water 1.5L - R25
+3. Still Water 5L - R65
+4. Sparkling 500ml - R20
+5. Lemon Flavored 500ml - R22
+6. Peach Flavored 1L - R35
+
+## Theme
+- Primary: #007BFF (blue)
+- Accent: #00BFA5 (teal)
+- Refreshing light backgrounds.
 
 ## Local Preview
-Site open in browser. Test cart/WhatsApp.
-
-## Next: Deploy
-GitHub CLI (`gh`) not installed. Install then PR/deploy, or manual gh-pages.
-
-## Local Images Used
-- nike-shox-tl-black.png
-- nike-shox-tl-2.png
-- nike-shox-tl-black (1).png
+After Step 7: `start index.html` in browser.
 
